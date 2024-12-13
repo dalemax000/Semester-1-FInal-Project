@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src = "script.js" defer></script>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <title>Page 3</title>
+
+    <script>
+        const el = document.getElementById('overlayBtn');
+            el?.addEventListener('click', swapper, false);
+    window.onload=function(){
+        //above code is from stackoverflow.com just to stop the addEventListeners from cancelling eachother out or something idk
+        let countdownActive = false;
+
+document.getElementById("startRolls").addEventListener('click', function () {
+    if (countdownActive) return;
+
+    countdownActive = true;
+    let i = 10;
+    const interval = setInterval(() => {
+        console.log(i);
+        if (i === 0) {
+            console.log("countdown over");
+
+            var timeUp = document.createElement("h2");
+            timeUp.innerHTML = "Time's Up!!!";
+
+            clearInterval(interval);
+            countdownActive = false;
+        }
+        var count = document.createElement("h2");
+        count.innerHTML = (i);
+        i--;
+        document.getElementById("currentCount").appendChild(count);
+    }, 1000);
+});
+
+
+    
+    }
+
+    /* small errors in setInterval syntax corrected by chatgpt and stackoverflow forum */
+
+    </script>
+</head>
+    <body>
+        <h1 class = "header">Game 3</h1>
+        <h2 class = "subheader">Button Clicker</h2>
+        <h3 class = "subheader" >Click the button as much as you can in 10 seconds</h3>
+
+        <div id = "currentCount"></div>
+
+        <div id = "clickerButton"></div>
+
+        <div id = "startRolls" > Start Timer </div>
+
+        <div id = "returnHome" class = "redirect">
+            Return Home
+        </div>
+    </body>
+</html>

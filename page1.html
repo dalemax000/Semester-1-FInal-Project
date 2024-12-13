@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src = "script.js" defer></script>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <title>Page 1</title>
+    <script>
+            const el = document.getElementById('overlayBtn');
+            el?.addEventListener('click', swapper, false);
+    window.onload=function(){
+        //above code is from stackoverflow.com just to stop the addEventListeners from cancelling eachother out or something idk
+        document.getElementById('startRolls').addEventListener('click', function() {
+
+            var i = 0;
+        
+        
+            while(true){
+        var dice1 = Math.floor(Math.random() * 6) + 1;
+        var dice2 = Math.floor(Math.random() * 6) + 1;
+        var dice3 = Math.floor(Math.random() * 6) + 1;
+        var total = dice1 + dice2 + dice3;
+        
+        console.log(dice1 + "," + dice2 + "," + " and " + dice3);
+        console.log("Total is " + total);
+        
+        i++;
+        var rollAmount = document.getElementById("rollAmount");
+        var dice1Num = document.getElementById("dice1Num");
+        var dice2Num = document.getElementById("dice2Num");
+        var dice3Num = document.getElementById("dice3Num");
+
+            dice1Num.innerHTML = "Dice 1: " + dice1;
+            dice2Num.innerHTML = "Dice 2: " + dice2;
+            dice3Num.innerHTML = "Dice 3: " + dice3;
+	        rollAmount.innerHTML = "Your amount of rolls: " + i;
+
+        if(total === 15){
+            
+            break;
+        }
+    }
+});
+    };
+
+
+    </script>
+</head>
+    <body>
+        <h1 class = "header">Game 1</h1>
+        <h2 class = "subheader">"First to 15"</h2>
+        <h3 class = "subheader" >Try to roll dice to sum of 15 in the least amount of rolls possible</h3>
+        <h3 id = "dice1Num"></h3>
+        <h3 id = "dice2Num"></h3>
+        <h3 id = "dice3Num"></h3>
+        <h3 id = "rollAmount"></h3>
+
+        <div id = "startRolls">
+            Roll Dice
+        </div>
+        
+        <div id = "returnHome" class = "redirect">
+            Return Home
+        </div>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src = "script.js" defer></script>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <title>Page 2</title>
+    <script>
+        const el = document.getElementById('overlayBtn');
+            el?.addEventListener('click', swapper, false);
+    window.onload=function(){
+        //above code is from stackoverflow.com just to stop the addEventListeners from cancelling eachother out or something idk
+        document.getElementById('startRolls').addEventListener('click', function() {
+
+            var i = 0;
+            var output = document.getElementById('output');
+        
+        var dice1 = Math.floor(Math.random() * 6) + 1;
+        var dice2 = Math.floor(Math.random() * 6) + 1;
+        var dice3 = Math.floor(Math.random() * 6) + 1;
+        var product = dice1 * dice2 * dice3;
+        
+        console.log(dice1 + "," + dice2 + "," + " and " + dice3);
+        console.log("Product is " + product);
+        
+        i++;
+        var finalScore = document.getElementById("finalScore");
+        var dice1Num = document.getElementById("dice1Num");
+        var dice2Num = document.getElementById("dice2Num");
+        var dice3Num = document.getElementById("dice3Num");
+
+            dice1Num.innerHTML = "Dice 1: " + dice1;
+            dice2Num.innerHTML = "Dice 2: " + dice2;
+            dice3Num.innerHTML = "Dice 3: " + dice3;
+	        finalScore.innerHTML = "Your final score is: " + product;
+
+        
+        }
+    )};
+
+
+    </script>
+</head>
+    <body>
+        <h1 class = "header">Game 2</h1>
+        <h2 class = "subheader">"Highest Dice Score"</h2>
+        <h3 class = "subheader" >Roll dice and try to get the highest product possible</h3>
+        <h3 id = "dice1Num"></h3>
+        <h3 id = "dice2Num"></h3>
+        <h3 id = "dice3Num"></h3>
+        <h3 id = "finalScore"></h3>
+
+        <div id = "startRolls">
+            Roll Dice
+        </div>
+
+        <div id = "returnHome" class = "redirect">
+            Return Home
+        </div>
+    </body>
+</html>

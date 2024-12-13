@@ -1,0 +1,82 @@
+html {
+    background-color: #76b5c5 ;
+}
+
+
+
+.redirect:hover {
+    background-color:#063970;
+}
+.redirect-background {
+    background-color: #abdbe3 ;
+    margin: auto;
+    margin-top: 50px;
+    height: 600px;
+    width: 900px;
+    display: flex;
+    border: 10px #21130d;
+    border-style: dashed;
+
+}
+
+.redirect-background > div {
+    background-color: #eeeee4;
+    flex: inline;
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    line-height: 90px;
+    font-size: 30px;
+    border: 5px #21130d;
+    border-style: dashed;
+}
+
+.header {
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+
+.subheader {
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+
+
+#returnHome {
+    flex: inline;
+    height: 75px;
+    width: 125px;
+    margin: auto;
+    margin-top:200px; 
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    background-color:#eeeee4;
+    text-align: center;
+    position: fixed;
+    left: 45%;
+    top: 50%;
+}
+
+#startRolls {
+    flex: inline;
+    height: 75px;
+    width: 125px;
+    margin: auto;
+    margin-top:200px; 
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    background-color:#eeeee4;
+    text-align: center;
+    position: fixed;
+    left: 45%;
+    top: 30%;
+}
+
+#clickerButton {
+    
+}
